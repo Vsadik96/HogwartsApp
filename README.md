@@ -1,7 +1,7 @@
 # Hogwarts
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.10.
-To use this project you need HogwartsApi: repository.
+To use this project you need HogwartsApi:https://github.com/Vsadik96/Hogwarts_API
 
 You need it to connect with DataBase, and enjoy the web
 
