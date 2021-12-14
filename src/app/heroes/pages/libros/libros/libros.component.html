@@ -1,0 +1,22 @@
+<h1 class="titulo" >Libros de la Saga</h1>
+<mat-divider></mat-divider>
+<br>
+<pagination-controls
+(pageChange)="page = $event"
+previousLabel="Anterior"
+nextLabel="Siguiente">
+</pagination-controls>
+
+<div fxLayout="row wrap"
+fxLayout.xs="column"
+fxLayoutAlign="center"
+fxLayoutGap="20px">
+
+<div fxFlex="20"
+    fxFlex.lg="15"
+    fxFlex.sm="30"
+        *ngFor="let libros of libros  |  paginate: {itemsPerPage: 2, currentPage: page}">
+
+<app-libros-componentes [libro]="libros"></app-libros-componentes>
+</div>
+</div>

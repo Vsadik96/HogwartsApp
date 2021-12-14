@@ -1,0 +1,18 @@
+<html>
+  <body>
+     <div class='card'>
+    
+    <img class="personajeImagen" src="{{libro.imagen}}">
+    <div class='info'>
+      <h1 class='title'>{{libro.libro}}  </h1>
+      <h2> {{libro.fecha_de_lanzamiento}} </h2>
+      <h3 class="director"> {{libro.autora}}</h3>
+    <cdk-virtual-scroll-viewport itemSize="100" class="scroll">
+        <p class='description'>{{libro.descripcion}}</p>
+    </cdk-virtual-scroll-viewport>
+      </div>
+</div>
+
+  </body>
+</html>
+

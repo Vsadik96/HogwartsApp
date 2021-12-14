@@ -1,0 +1,77 @@
+    <--! Menú -->
+<html>
+
+</html>
+<mat-sidenav-container  fullscreen>
+    <mat-sidenav #sidenav mode="push">
+     
+    <mat-toolbar class="menu" >
+        <span>Menu</span>
+        <span class="spacer"></span>
+
+        <button mat-icon-button (click)="sidenav.toggle()" > 
+            <mat-icon>auto_fix_high</mat-icon>
+        </button>
+   </mat-toolbar>     
+
+        <mat-nav-list > 
+
+            <a routerLink="./listado" mat-list-item (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>face</mat-icon>
+                <span>Personajes principales</span>
+            </a>
+
+            <a routerLink="./hechizos" mat-list-item (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>auto_fix_high</mat-icon>
+                <span>Hechizos</span>
+            </a>
+
+            <a routerLink="./libros" mat-list-item (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>book</mat-icon>
+                <span>Libros publicados</span>
+            </a>
+
+            <a routerLink="./peliculas" mat-list-item (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>movie</mat-icon>
+                <span>Peliculas</span>
+            </a>
+
+            <a routerLink="./agregar" mat-list-item (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>add</mat-icon>
+                <span>Añadir Personaje</span>
+            </a>
+
+            <a routerLink="./agregarhechizo" mat-list-item (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>add</mat-icon>
+                <span>Añadir hechizos</span>
+            </a>
+
+            <a routerLink="./buscar" mat-list-item (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>search</mat-icon>
+                <span>Buscar</span>
+            </a>
+
+        </mat-nav-list>
+    
+
+    </mat-sidenav>
+<mat-toolbar class="menu"  > 
+    <button mat-icon-button (click)="sidenav.toggle()" > 
+       <mat-icon>auto_fix_high</mat-icon> 
+
+    </button>
+    <h1 class="titulo" >HogwartsApp</h1>
+    
+
+    <span class="spacer"></span>
+<button mat-button (click)="logout()"  [routerLink]="['/inicio']">
+    <mat-icon>close</mat-icon>
+</button>
+ <mat-label>{{username}}</mat-label>
+
+
+</mat-toolbar>
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
+</mat-sidenav-container>

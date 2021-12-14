@@ -1,0 +1,22 @@
+
+<h1>Listado de Hechizos</h1>
+<mat-divider></mat-divider>
+<br>
+
+<div fxLayout="row wrap"
+     fxLayout.xs="column"
+     fxLayoutAlign=""
+     fxLayoutGap="10px">
+
+     
+     <div fxFlex="10"
+          fxFlex.lg="15"
+          fxFlex.sm="30"
+         *ngFor="let hechizos of hechizos">
+         <app-hechizos-tarjeta [hechizo]="hechizos" ></app-hechizos-tarjeta>      
+</div>
+
+
+
+
+

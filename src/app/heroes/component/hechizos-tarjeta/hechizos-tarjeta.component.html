@@ -1,0 +1,17 @@
+<mat-card class="hechizo-card">      
+    
+
+       <mat-icon mat-list-icon>auto_fix_high </mat-icon>
+       <mat-card-title><span><strong>{{hechizo.hechizo}}:</strong></span> </mat-card-title>      
+       <mat-card-content> 
+        <p>{{hechizo.uso}} </p>
+        
+      </mat-card-content> 
+      
+      <mat-card-actions> 
+        <button mat-button [routerLink]="['/personajes/agregarhechizo/editar', hechizo.id]" >   
+         Editar
+     </button> 
+    </mat-card-actions>
+       
+  </mat-card> 

@@ -1,0 +1,81 @@
+<h1>Nuevo personaje</h1>
+
+<div fxLayout="row" fxLayoutGap="40px">
+
+    <div fxFlex="50" fxLayout="column">
+
+        <div fxLayout="row" fxLayoutGap="20px">
+            <mat-form-field>
+                <mat-label>Personaje</mat-label>
+                <input matInput
+                       type="text"
+                       [(ngModel)]="heroe.personaje" 
+                       required>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Fecha Nacimiento</mat-label>
+                <input matInput
+                       type="text"
+                       [(ngModel)]="heroe.fecha_nacimiento"
+                       required>
+                       
+            </mat-form-field>
+        </div>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Casa de Hogwarts</mat-label>
+            <textarea matInput
+            type="text"
+            [(ngModel)]="heroe.casa_hogwarts"
+            required ></textarea>
+            
+        </mat-form-field>
+        <mat-form-field>
+            <!---->
+            <mat-label>hijos</mat-label>
+            <textarea input class="historia" matInput 
+                   type="textarea"
+                   [(ngModel)]="heroe.hijos"
+                   required>
+                   </textarea>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Historia</mat-label>
+            <textarea input class="historia" matInput 
+                   type="textarea"
+                   [(ngModel)]="heroe.descripcion"
+                   required>
+                   </textarea>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Foto Url</mat-label>
+            <input matInput
+                   type="url"
+                   [(ngModel)]="heroe.imagen"
+                   required>
+        </mat-form-field>
+        <br>
+         
+        <button 
+            mat-raised-button
+            (click)="guardar()"
+            (click)="mostrarSnakbar">
+            Guardar
+        </button>
+
+        <button *ngIf="heroe.id"
+            mat-raised-button
+            (click)="borrar()">
+                Eliminar
+        </button>
+
+    </div>
+
+    <div fxFlex="50">
+         <img [src]="heroe | imagen" >   
+    </div>
+
+</div>
