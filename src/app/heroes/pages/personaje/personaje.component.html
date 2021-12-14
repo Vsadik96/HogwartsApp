@@ -1,0 +1,41 @@
+<mat-grid-list cols="1" *ngIf="!personaje; else divHeroe">
+    <mat-grid-tile>
+        <mat-spinner></mat-spinner>
+    </mat-grid-tile>
+</mat-grid-list>
+
+
+<ng-template #divHeroe>
+    <div fxLayout="row" 
+         fxLayout.xs="column"
+         fxLayoutGap="30px" >
+
+         <div fxFlex="30">
+            <h1>{{personaje.personaje}} <h3>  </h3></h1>
+            <mat-divider></mat-divider>
+            <br>
+            <img src={{personaje.imagen}}> 
+         </div>
+
+         <div fxFlex="50"
+            fxLayoutGap="30px">
+            <h1>{{ personaje.fecha_nacimiento}}</h1>
+
+            
+                <mat-divider></mat-divider>
+             
+                <mat-list class="historia" >
+               <p>Casa: {{personaje.casa_hogwarts}} </p>
+                <p>Historia: <br>{{ personaje.descripcion }}</p>
+                </mat-list>  
+        
+
+            <br>
+            <button (click)=regresar()>
+                Regresar
+            </button>
+
+    </div>
+</div>
+</ng-template>
+

@@ -1,0 +1,20 @@
+<html>
+  <body>
+        <div class='card'>
+     <img class="personajeImagen" src="{{pelicula.imagen}}">
+     <div class='info'>
+       <h1 class='title'>{{pelicula.titulo}}  </h1>
+       <h2 class="fecha">{{pelicula.fecha_lanzamiento}}</h2>
+       <h3 class="director">{{pelicula.director}}</h3>
+     <cdk-virtual-scroll-viewport itemSize="100" class="scroll">
+         <p class='description'>{{pelicula.descripcion}}</p>
+     </cdk-virtual-scroll-viewport>
+       </div>
+ </div>
+
+  </body>
+</html>
+
+
+
+ 

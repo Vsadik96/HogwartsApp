@@ -1,0 +1,45 @@
+ 
+ 
+ <app-buscador-componente (eventoBusqueda)="buscar($event)" > </app-buscador-componente>
+ <div class="container" fxLayout="wrap row">
+
+   <li class="ListaPersonajes">
+     <div fxLayout="row wrap"
+      fxLayout.xs="column"
+      fxLayoutAlign="space-evenly center"
+      *ngFor="let personajes of  personajes">        
+      <app-personaje-tarjeta [personaje]="personajes"></app-personaje-tarjeta>
+      </div>
+  </li>
+  
+
+ <li class="ListaHechizos">  
+   <div fxLayout="row wrap"
+      fxLayout.xs="column"
+      fxLayoutAlign="space-evenly center"
+      fxLayoutGap="20px"
+        *ngFor="let hechizos  of hechizos">
+    <app-hechizos-tarjeta [hechizo]="hechizos"></app-hechizos-tarjeta>
+  </div>
+</li>
+
+<li class="ListaPeliculas"> 
+<div  fxLayout="row wrap"
+    fxLayout.xs="column"
+    fxLayoutAlign="space-evenly center"
+    fxLayoutGap="20px"
+      *ngFor="let peliculas of peliculas">
+  <app-pelicula-tarjeta [pelicula]="peliculas"></app-pelicula-tarjeta>
+</div>
+</li>
+<li class="ListaLibros"> 
+  <div FxLayout="row wrap"
+    fxLayout.xs="column"
+    fxLayoutAlign="space-evenly center"
+    fxLayoutGap="20px"
+  *ngFor="let libros of libros">
+
+  <app-libros-componentes [libro]="libros" ></app-libros-componentes>
+</div>
+</li>
+</div>

@@ -1,0 +1,49 @@
+<h1>Nuevo Hechizo</h1>
+<hr>
+
+<div fxLayout="row" fxLayoutGap="40px">
+
+    <div fxFlex="50" fxLayout="column">
+
+        <div fxLayout="row" fxLayoutGap="20px">
+            <mat-form-field>
+                <mat-label>Hechizo</mat-label>
+                <input matInput
+                       type="text"
+                       [(ngModel)]="hechizo.hechizo"
+                       required>
+            </mat-form-field>
+
+        </div>
+
+        <mat-form-field>
+            <mat-label>Acción del hechizo</mat-label>
+            <textarea matInput
+                   type="text"
+                   [(ngModel)]="hechizo.uso"
+                   required>
+                   </textarea>
+        </mat-form-field>
+
+       
+        <br>
+         
+        <button 
+            mat-raised-button
+            (click)="guardar()"
+            (click)="mostrarSnakbar">
+            Guardar
+         
+        </button>
+
+        <button *ngIf="hechizo.id"
+            mat-raised-button
+            (click)="borrar()">
+                Eliminar
+        </button>
+
+    </div>
+
+  
+
+</div>

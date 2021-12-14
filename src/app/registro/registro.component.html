@@ -1,0 +1,31 @@
+
+<html>
+  <body>
+    <div class="wrapper">
+
+      
+      <div class="btnsalir">
+         <button class="btn-salir" type="submit" routerLink="/inicio">Salir</button>
+      </div>
+ 
+  <h1>Registro</h1>
+
+
+  <form class="form" method="post" action="yourpage.html">
+    <input   class="name"   type="text"  [(ngModel)]="username" name="Username" placeholder="Username" required />
+    <div>
+    </div>
+    <input class="email" type="password" [(ngModel)]="password" name="password" placeholder="Password" required/>
+    <input class="register-password" type="password"  [(ngModel)]="confirmPassword"  name="password" placeholder="Repite la contraseña" required />
+     <div>
+    </div>
+    <button class="btn" type="submit" (click)="register()"
+    (click)="mostrarSnakbar">Registrar</button>
+  </form>
+</div>
+
+
+  </body>
+</html>
+  
+

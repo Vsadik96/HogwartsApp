@@ -1,0 +1,28 @@
+<html>
+  <body>
+    
+<div class="image">
+ </div>
+    <div class='card'>
+    <img class="personajeImagen" src="{{personaje.imagen}}">
+    <div class='info'>
+      <h1 class='title'>{{personaje.personaje}}</h1>
+    <cdk-virtual-scroll-viewport itemSize="100" class="scroll">
+        <p class='description'>{{personaje.descripcion}}</p>
+    </cdk-virtual-scroll-viewport>
+      
+<div class="boton">
+    <button class="editar" [routerLink]="['/personajes/editar', personaje.id]" > Editar </button>   
+    <button  class="saber" [routerLink]="['/personajes', personaje.id ]">  Saber más... </button>  
+      </div>
+     
+   </div>
+
+    </div>
+  
+  </body>
+</html>
+
+
+
+
